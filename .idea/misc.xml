@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/customise_screen.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/customise_screen.xml" value="0.21253516588459884" />
         <entry key="app/src/main/res/layout/main_menu_screen.xml" value="0.2113985229503609" />
-        <entry key="app/src/main/res/layout/settings_screen.xml" value="0.13997736715610182" />
+        <entry key="app/src/main/res/layout/settings_screen.xml" value="0.22780734909664807" />
         <entry key="app/src/main/res/layout/song_one.xml" value="0.15990990990990991" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.318974358974359" />
       </map>
