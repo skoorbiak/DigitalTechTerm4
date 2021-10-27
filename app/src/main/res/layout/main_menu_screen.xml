@@ -7,23 +7,23 @@
     tools:context=".main_menu_screen">
 
     <ImageView
-        andorid:background="?androidattr/"
         android:id="@+id/imageView"
-        android:layout_width="770dp"
-        android:layout_height="519dp"
+        android:layout_width="486dp"
+        android:layout_height="541dp"
         android:scaleX="1.6"
         android:scaleY="1.42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404"
         app:srcCompat="@drawable/backgroundpng" />
 
     <Button
         android:id="@+id/go2playbtn"
         android:layout_width="213dp"
         android:layout_height="119dp"
+        android:background="#00FFFFFF"
         android:onClick="PlayScreen"
         android:visibility="visible"
         app:cornerRadius="20dp"
@@ -31,12 +31,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.559" />
 
     <Button
         android:id="@+id/go2customisebtn"
         android:layout_width="310dp"
         android:layout_height="80dp"
+        android:background="#00FBFBFB"
         android:onClick="CustomiseScreen"
         android:visibility="visible"
         app:cornerRadius="20dp"
@@ -45,18 +46,19 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.29" />
 
     <Button
         android:id="@+id/go2shopbtn"
         android:layout_width="105dp"
         android:layout_height="100dp"
+        android:background="#00FFFFFF"
         android:onClick="ShopScreen"
         android:visibility="visible"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -65,12 +67,13 @@
         android:id="@+id/go2settingsbtn"
         android:layout_width="105dp"
         android:layout_height="100dp"
+        android:background="#00FFFFFF"
         android:onClick="SettingsScreen"
         android:visibility="visible"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/go2shopbtn"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
