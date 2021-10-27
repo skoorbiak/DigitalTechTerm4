@@ -22,16 +22,16 @@ public class shop_screen extends AppCompatActivity {
     }
 
     public void playStore1(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=yourpackegName")); /// here "yourpackegName" from your app packeg Name
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=VibeBeatz")); /// here "yourpackegName" from your app packeg Name
         startActivity(intent);
     }
 
     public void playStore2(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("market://details?id=yourpackegName")); /// here "yourpackegName" from your app packeg Name
+        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("market://details?id=VibeBeatz")); /// here "yourpackegName" from your app packeg Name
         startActivity(intent);
     }
     public void back2main(View view){
-        Intent intent = new Intent(this,shop_screen.class);
+        Intent intent = new Intent(this,main_menu_screen.class);
         mp.start();
         startActivity(intent);
     }
