@@ -14,7 +14,6 @@
             android:exported="true" />
         <activity android:name=".play_screen" />
         <activity android:name=".win_screen" />
-        <activity android:name=".lose_screen" />
         <activity android:name=".song_select_screen" />
         <activity android:name=".customise_screen" />
         <activity android:name=".shop_screen" />

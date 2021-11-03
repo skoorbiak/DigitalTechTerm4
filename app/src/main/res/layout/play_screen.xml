@@ -12,17 +12,17 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/songselectscreenpng" />
 
     <TextView
         android:id="@+id/thinkingaboutyou_textview"
         android:layout_width="82dp"
         android:layout_height="45dp"
-        android:text="Thinking about you"
+        android:text="Spark of light"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -34,7 +34,7 @@
         android:id="@+id/songtime_textview"
         android:layout_width="115dp"
         android:layout_height="24dp"
-        android:text="Song time: 2:27"
+        android:text="Song time: 2:39"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
@@ -43,13 +43,33 @@
         app:layout_constraintVertical_bias="0.251" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/playsongone_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FF8589"
-        android:backgroundTint="#FF8589"
-        android:text="Button"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:backgroundTint="#DC5052"
+        android:backgroundTintMode="add"
+        android:foregroundTint="#FF8589"
+        android:onClick="go2songone"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/back2mainmenuscreen_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="backtomain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        tools:text="e" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
