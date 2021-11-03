@@ -11,6 +11,7 @@ import java.util.TimerTask;
 
 public class song_one extends AppCompatActivity {
     Timer timer;
+    Timer timer2;
     MediaPlayer mp;
     MediaPlayer mp2;
     @Override
@@ -19,8 +20,14 @@ public class song_one extends AppCompatActivity {
         setContentView(R.layout.song_one);
         mp = MediaPlayer.create(song_one.this, R.raw.alertnotification);
         mp2 = MediaPlayer.create(song_one.this, R.raw.sparkoflightsong);
-        mp2.start();
         timer = new Timer();
+        timer2 = new Timer();
+        timer2.schedule(new TimerTask(){
+            @Override
+            public void run() {
+                mp2.start();
+            }
+        }, 3000);
         timer.schedule(new TimerTask(){
             @Override
             public void run() {

@@ -16,16 +16,24 @@ public class play_screen extends AppCompatActivity {
         setContentView(R.layout.play_screen);
         mp = MediaPlayer.create(play_screen.this, R.raw.alertnotification);
         mp2 = MediaPlayer.create(play_screen.this, R.raw.windthroughtreessfx);
-        mp2.start();
+        mp2.stop();
     }
 
     public void go2songone(View view) {
         Intent intent = new Intent(this,song_one.class);
-        mp.start();
-        mp2.stop();
+        if(mp2 != null && mp.isPlaying())
+        {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
+        mp = MediaPlayer.create(this, R.raw.sparkoflightsong);
+        mp2.start();
         startActivity(intent);
-
     }
+
+
+
 
     public void backtomain(View view) {
         Intent intent = new Intent (this, main_menu_screen.class);
