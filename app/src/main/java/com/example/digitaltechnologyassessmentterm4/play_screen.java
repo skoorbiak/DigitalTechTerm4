@@ -10,6 +10,7 @@ import android.view.View;
 public class play_screen extends AppCompatActivity {
     MediaPlayer mp;
     MediaPlayer mp2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +21,8 @@ public class play_screen extends AppCompatActivity {
     }
 
     public void go2songone(View view) {
-        Intent intent = new Intent(this,song_one.class);
-        if(mp2 != null && mp.isPlaying())
-        {
+        Intent intent = new Intent(this, song_one.class);
+        if (mp2 != null && mp.isPlaying()) {
             mp.stop();
             mp.release();
             mp = null;
@@ -33,10 +33,8 @@ public class play_screen extends AppCompatActivity {
     }
 
 
-
-
     public void backtomain(View view) {
-        Intent intent = new Intent (this, main_menu_screen.class);
+        Intent intent = new Intent(this, main_menu_screen.class);
         mp.start();
         startActivity(intent);
     }

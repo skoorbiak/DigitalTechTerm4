@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+
 public class main_menu_screen extends AppCompatActivity {
     MediaPlayer mp;
     MediaPlayer mp2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +18,7 @@ public class main_menu_screen extends AppCompatActivity {
         mp = MediaPlayer.create(main_menu_screen.this, R.raw.alertnotification);
         mp2 = MediaPlayer.create(main_menu_screen.this, R.raw.windthroughtreessfx);
         mp2.start();
+
     }
     public void PlayScreen(View view){
         Intent intent = new Intent(this,play_screen.class);

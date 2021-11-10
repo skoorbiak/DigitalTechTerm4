@@ -17,11 +17,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class song_one extends AppCompatActivity {
-    ImageView iv_11, iv_12, iv_13, iv_14,
-            iv_21, iv_22, iv_23, iv_24,
-            iv_31, iv_32, iv_33, iv_34,
-            iv_41, iv_42, iv_43, iv_44,
-            iv_51, iv_52, iv_53, iv_54;
+    ImageView iv_11, iv_12, iv_13,
+            iv_21, iv_22, iv_23,
+            iv_31, iv_32, iv_33,
+            iv_41, iv_42, iv_43,
+            iv_51, iv_52, iv_53;
     Button buttonply;
     TextView time_remain, number_score, number_best;
     Random r;
@@ -30,51 +30,36 @@ public class song_one extends AppCompatActivity {
     int currentScore = 0;
     int bestScore = 0;
     CountDownTimer timer3;
-    Timer timer2;
-    MediaPlayer mp;
+    MediaPlayer mp2;
 
-    // Timer timer;
-    // Timer timer2;
-    //MediaPlayer mp;
-    //MediaPlayer mp2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_one);
-        mp = MediaPlayer.create(song_one.this, R.raw.sparkoflightsong);
-        timer2.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                mp.start();
-            }
-        }, 3000);
+        mp2 = MediaPlayer.create(song_one.this, R.raw.sparkoflightsong);
+
         SharedPreferences preferences = getSharedPreferences("PREFS", 0);
         bestScore = preferences.getInt("highscore", 0);
 
         iv_11 = (ImageView) findViewById(R.id.iv_11);
         iv_12 = (ImageView) findViewById(R.id.iv_12);
         iv_13 = (ImageView) findViewById(R.id.iv_13);
-        iv_14 = (ImageView) findViewById(R.id.iv_14);
 
         iv_21 = (ImageView) findViewById(R.id.iv_21);
         iv_22 = (ImageView) findViewById(R.id.iv_22);
         iv_23 = (ImageView) findViewById(R.id.iv_23);
-        iv_24 = (ImageView) findViewById(R.id.iv_24);
 
         iv_31 = (ImageView) findViewById(R.id.iv_31);
         iv_32 = (ImageView) findViewById(R.id.iv_32);
         iv_33 = (ImageView) findViewById(R.id.iv_33);
-        iv_34 = (ImageView) findViewById(R.id.iv_34);
 
         iv_41 = (ImageView) findViewById(R.id.iv_41);
         iv_42 = (ImageView) findViewById(R.id.iv_42);
         iv_43 = (ImageView) findViewById(R.id.iv_43);
-        iv_44 = (ImageView) findViewById(R.id.iv_44);
 
         iv_51 = (ImageView) findViewById(R.id.iv_51);
         iv_52 = (ImageView) findViewById(R.id.iv_52);
         iv_53 = (ImageView) findViewById(R.id.iv_53);
-        iv_54 = (ImageView) findViewById(R.id.iv_54);
 
         buttonply = (Button) findViewById(R.id.buttonply);
 
@@ -102,33 +87,30 @@ public class song_one extends AppCompatActivity {
                 iv_31.setEnabled(false);
                 iv_32.setEnabled(false);
                 iv_33.setEnabled(false);
-                iv_34.setEnabled(false);
                 buttonply.setVisibility(View.VISIBLE);
 
                 iv_11.setImageResource(blankImage);
                 iv_12.setImageResource(blankImage);
                 iv_13.setImageResource(blankImage);
-                iv_14.setImageResource(blankImage);
 
                 iv_21.setImageResource(blankImage);
                 iv_22.setImageResource(blankImage);
                 iv_23.setImageResource(blankImage);
-                iv_24.setImageResource(blankImage);
+
 
                 iv_31.setImageResource(blankImage);
                 iv_32.setImageResource(blankImage);
                 iv_33.setImageResource(blankImage);
-                iv_34.setImageResource(blankImage);
+
 
                 iv_41.setImageResource(blankImage);
                 iv_42.setImageResource(blankImage);
                 iv_43.setImageResource(blankImage);
-                iv_44.setImageResource(blankImage);
+
 
                 iv_51.setImageResource(blankImage);
                 iv_52.setImageResource(blankImage);
                 iv_53.setImageResource(blankImage);
-                iv_54.setImageResource(blankImage);
 
                 Toast.makeText(song_one.this, "Game Over!", Toast.LENGTH_SHORT).show();
                 if (currentScore > bestScore) {
@@ -173,16 +155,7 @@ public class song_one extends AppCompatActivity {
                 }
             }
         });
-        iv_34.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (rockLocationRow3 == 4) {
-                    continueGame();
-                } else {
-                    endGame();
-                }
-            }
-        });
+
         buttonply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,12 +164,9 @@ public class song_one extends AppCompatActivity {
         });
 
 
-
     }
-    public void continueGame(){
-        //row5
-        rockLocationRow5 = rockLocationRow4;
-        setRockLocation(rockLocationRow5, 5);
+
+    public void continueGame() {
         //row4
         rockLocationRow4 = rockLocationRow3;
         setRockLocation(rockLocationRow4, 4);
@@ -232,10 +202,29 @@ public class song_one extends AppCompatActivity {
     }
 
     private void initGame() {
+        mp2.start();
         iv_31.setEnabled(true);
         iv_32.setEnabled(true);
         iv_33.setEnabled(true);
-        iv_34.setEnabled(true);
+        iv_11.setImageResource(tapImage1);
+        iv_12.setImageResource(tapImage4);
+        iv_13.setImageResource(tapImage3);
+
+        iv_21.setImageResource(tapImage1);
+        iv_22.setImageResource(tapImage4);
+        iv_23.setImageResource(tapImage3);
+
+        iv_31.setImageResource(tapImage1);
+        iv_32.setImageResource(tapImage4);
+        iv_33.setImageResource(tapImage3);
+
+        iv_41.setImageResource(tapImage1);
+        iv_42.setImageResource(tapImage4);
+        iv_43.setImageResource(tapImage3);
+
+        iv_51.setImageResource(tapImage1);
+        iv_52.setImageResource(tapImage4);
+        iv_53.setImageResource(tapImage3);
         buttonply.setVisibility(View.INVISIBLE);
         currentScore = 0;
         number_score.setText("SCORE: " + currentScore);
@@ -248,11 +237,11 @@ public class song_one extends AppCompatActivity {
         //row5 - nothing
         //row4
         rockLocationRow4 = 2;
-        iv_42.setImageResource(tapImage1);
+        iv_42.setImageResource(frameImage);
         //row5 - nothing
         //row4
         rockLocationRow3 = 2;
-        iv_32.setImageResource(tapImage1);
+        iv_32.setImageResource(frameImage);
         //row5 - nothing
         //row4
         rockLocationRow2 = r.nextInt(3) + 1;
@@ -266,36 +255,31 @@ public class song_one extends AppCompatActivity {
 
     private void endGame() {
         timer3.cancel();
+        mp2.stop();
         iv_31.setEnabled(false);
         iv_32.setEnabled(false);
         iv_33.setEnabled(false);
-        iv_34.setEnabled(false);
         buttonply.setVisibility(View.VISIBLE);
 
         iv_11.setImageResource(blankImage);
         iv_12.setImageResource(blankImage);
         iv_13.setImageResource(blankImage);
-        iv_14.setImageResource(blankImage);
 
         iv_21.setImageResource(blankImage);
         iv_22.setImageResource(blankImage);
         iv_23.setImageResource(blankImage);
-        iv_24.setImageResource(blankImage);
 
         iv_31.setImageResource(blankImage);
         iv_32.setImageResource(blankImage);
         iv_33.setImageResource(blankImage);
-        iv_34.setImageResource(blankImage);
 
         iv_41.setImageResource(blankImage);
         iv_42.setImageResource(blankImage);
         iv_43.setImageResource(blankImage);
-        iv_44.setImageResource(blankImage);
 
         iv_51.setImageResource(blankImage);
         iv_52.setImageResource(blankImage);
         iv_53.setImageResource(blankImage);
-        iv_54.setImageResource(blankImage);
 
         Toast.makeText(song_one.this, "Failed!", Toast.LENGTH_SHORT).show();
     }
@@ -305,7 +289,6 @@ public class song_one extends AppCompatActivity {
             iv_11.setImageResource(blankImage);
             iv_12.setImageResource(blankImage);
             iv_13.setImageResource(blankImage);
-            iv_14.setImageResource(blankImage);
 
             switch (place) {
                 case 1:
@@ -317,16 +300,12 @@ public class song_one extends AppCompatActivity {
                 case 3:
                     iv_13.setImageResource(tapImage3);
                     break;
-                case 4:
-                    iv_14.setImageResource(tapImage4);
-                    break;
             }
         }
         if (row == 2) {
             iv_21.setImageResource(blankImage);
             iv_22.setImageResource(blankImage);
             iv_23.setImageResource(blankImage);
-            iv_24.setImageResource(blankImage);
 
             switch (place) {
                 case 1:
@@ -338,16 +317,12 @@ public class song_one extends AppCompatActivity {
                 case 3:
                     iv_23.setImageResource(tapImage3);
                     break;
-                case 4:
-                    iv_24.setImageResource(tapImage4);
-                    break;
             }
         }
         if (row == 3) {
             iv_31.setImageResource(blankImage);
             iv_32.setImageResource(blankImage);
             iv_33.setImageResource(blankImage);
-            iv_34.setImageResource(blankImage);
 
             switch (place) {
                 case 1:
@@ -359,16 +334,12 @@ public class song_one extends AppCompatActivity {
                 case 3:
                     iv_33.setImageResource(tapImage3);
                     break;
-                case 4:
-                    iv_34.setImageResource(tapImage4);
-                    break;
             }
         }
         if (row == 4) {
             iv_41.setImageResource(blankImage);
             iv_42.setImageResource(blankImage);
             iv_43.setImageResource(blankImage);
-            iv_44.setImageResource(blankImage);
 
             switch (place) {
                 case 1:
@@ -380,34 +351,12 @@ public class song_one extends AppCompatActivity {
                 case 3:
                     iv_43.setImageResource(tapImage3);
                     break;
-                case 4:
-                    iv_44.setImageResource(tapImage4);
-                    break;
             }
         }
-        if (row == 5) {
-            iv_51.setImageResource(blankImage);
-            iv_52.setImageResource(blankImage);
-            iv_53.setImageResource(blankImage);
-            iv_54.setImageResource(blankImage);
 
-            switch (place) {
-                case 1:
-                    iv_51.setImageResource(tapImage1);
-                    break;
-                case 2:
-                    iv_52.setImageResource(tapImage2);
-                    break;
-                case 3:
-                    iv_53.setImageResource(tapImage3);
-                    break;
-                case 4:
-                    iv_54.setImageResource(tapImage4);
-                    break;
-            }
         }
     }
-}
+
 
         /*
         timer2.schedule(new TimerTask(){

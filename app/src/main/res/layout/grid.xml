@@ -33,12 +33,7 @@
         android:layout_weight="1"
         android:scaleType="centerInside"/>
 
-    <ImageView
-        android:id="@+id/iv_14"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:scaleType="centerInside"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,13 +62,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="centerInside"/>
-
-        <ImageView
-            android:id="@+id/iv_24"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,12 +91,6 @@
             android:layout_weight="1"
             android:scaleType="centerInside"/>
 
-        <ImageView
-            android:id="@+id/iv_34"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -138,12 +120,6 @@
             android:layout_weight="1"
             android:scaleType="centerInside"/>
 
-        <ImageView
-            android:id="@+id/iv_44"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -168,13 +144,6 @@
 
         <ImageView
             android:id="@+id/iv_53"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside"/>
-
-        <ImageView
-            android:id="@+id/iv_54"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
