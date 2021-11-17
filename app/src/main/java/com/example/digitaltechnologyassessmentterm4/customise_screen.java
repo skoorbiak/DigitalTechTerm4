@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.Toast;
 
 public class customise_screen extends AppCompatActivity {
-    MediaPlayer mp;
-    MediaPlayer mp2;
+    MediaPlayer mp; //Media player, mp
+    MediaPlayer mp2; //Media player, mp2
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.customise_screen);
+    protected void onCreate(Bundle savedInstanceState) { //when created
+        super.onCreate(savedInstanceState); //when created load last saved instance
+        setContentView(R.layout.customise_screen); //set the content of the screen to customise_screen.xml
         mp = MediaPlayer.create(customise_screen.this, R.raw.alertnotification);
         mp2 = MediaPlayer.create(customise_screen.this, R.raw.windthroughtreessfx);
         mp2.start();

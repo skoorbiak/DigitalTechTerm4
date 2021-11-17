@@ -354,22 +354,5 @@ public class song_one extends AppCompatActivity {
             }
         }
 
-        }
     }
-
-
-        /*
-        timer2.schedule(new TimerTask(){
-            @Override
-            public void run() {
-                mp2.start();
-            }
-        }, 3000);
-        timer.schedule(new TimerTask(){
-            @Override
-            public void run() {
-            Intent intent = new Intent (song_one.this, win_screen.class);
-            startActivity(intent);
-            mp.start();
-            }
-        }, 165000);*/
+}
