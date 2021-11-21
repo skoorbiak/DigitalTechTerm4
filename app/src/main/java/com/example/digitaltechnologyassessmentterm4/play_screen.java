@@ -24,15 +24,7 @@ public class play_screen extends AppCompatActivity {
     }
 
     public void go2songone(View view) { //new void to go to song one
-        Intent intent = new Intent(this, song_one.class);
-        if (mp != null && mp2.isPlaying()) { //if mp is not null, and mp2 is playing
-            mp2.stop(); //stop mp2
-            mp2.release(); //release mp2
-            mp2 = null; //make mp2 null
-        }
-        mp3 = MediaPlayer.create(this, R.raw.sparkoflightsong); //mp = media player, create
-        //play_screen.this raw spark of light - sets what the variable is for mp2 (sparkoflightsong)
-        mp3.start(); //start mp (spark of light song)
+        Intent intent = new Intent(this, song_one.class); //create new intent to go from play_screen to song_one
         startActivity(intent); //start the activity
     }
 
